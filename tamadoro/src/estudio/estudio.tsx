@@ -4,6 +4,7 @@ import temporizador1 from './estudio'
 function Estudio(){
 return(<div>
         <h1>Temporizador</h1>
+        <div id='temp'></div>
         <div>
         <label htmlFor="">tiempo estudio</label>
             <br />        
