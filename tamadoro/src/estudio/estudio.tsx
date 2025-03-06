@@ -1,5 +1,7 @@
 import { useRef, useState } from 'react';
 import temporizador1 from './estudio';
+import React from 'react';
+import './estudio.css'
 
 function Estudio() {
     const intervaloRef = useRef<number | null>(null); 
@@ -36,16 +38,18 @@ function Estudio() {
             <div id="temp">
                 <div>00:00</div>
             </div>
-            <div>
-                <label htmlFor="">Tiempo de estudio</label>
+            <div id="btn-1">
+                <label htmlFor="" id="txt1">Tiempo de estudio</label>
                 <br />
-                <button className="btn btn-success" onClick={() => iniciarTemporizador(3600)}>60 + 15</button>
-                <button className="btn btn-success" onClick={() => iniciarTemporizador(3000)}>50 + 10</button>
-                <button className="btn btn-success" onClick={() => iniciarTemporizador(1500)}>25 + 5</button>
+                <button type="button" className="btn btn-outline-light" onClick={() => iniciarTemporizador(3600)}>60 + 15</button>
+                <button type="button" className="btn btn-outline-light" onClick={() => iniciarTemporizador(3000)}>50 + 10</button>
+                <button type="button" className="btn btn-outline-light" onClick={() => iniciarTemporizador(1500)}>25 + 5</button>
             </div>
-            <input className="btn btn-primary" type="button" value="Start" onClick={() => iniciarTemporizador(tiempo)} /> 
-            <input className="btn btn-primary" type="button" value="Stop" onClick={detenerTemporizador} /> 
-            <input className="btn btn-primary" type="button" value="Reset" onClick={reiniciarTemporizador} />       
+            <div id='btn-2'>
+                <input className="btn btn-outline-success" type="button" value="Start" onClick={() => iniciarTemporizador(tiempo)} /> 
+                <input className="btn btn-outline-danger" type="button" value="Stop" onClick={detenerTemporizador} /> 
+                <input className="btn btn-outline-warning" type="button" value="Reset" onClick={reiniciarTemporizador} />       
+            </div>        
         </div>
     );
 }
