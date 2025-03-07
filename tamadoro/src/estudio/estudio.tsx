@@ -34,7 +34,7 @@ function Estudio() {
 
     return (
         <div>
-            <h1>Temporizador</h1>
+            <h1 id='title'>Temporizador</h1>
             <div id="temp">
                 <div>00:00</div>
             </div>
